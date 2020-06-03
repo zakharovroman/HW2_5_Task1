@@ -155,7 +155,7 @@ extension QuestionsViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC = segue.destination as! ResultsViewController
-        resultVC.resultAnimalType = AnimalType.cat
+        resultVC.answersChoosen = answersChoosen
     }
 }
 

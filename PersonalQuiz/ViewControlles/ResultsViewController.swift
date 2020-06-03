@@ -20,14 +20,39 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var definitionResultLabel: UILabel!
     
-    var resultAnimalType: AnimalType!
-
+    var answersChoosen: [Answer]!
+    
+    private var cat = Result(type: .cat)
+    private var dog = Result(type: .dog)
+    private var rabbit = Result(type: .rabbit)
+    private var turtle = Result(type: .turtle)
+    
+    private var results = [Result]()
+    private  var resultAnimalType: AnimalType!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for item in answersChoosen {
+            switch item.type {
+            case .cat:
+                cat.count = +1
+            case .dog:
+                dog.count = +1
+            case .rabbit:
+                rabbit.count = +1
+            case .turtle:
+                turtle.count = +1
+            }
+            //print(item)
+        }
+        
+        results = [cat, dog, rabbit, turtle]
+        results.sort {$0.count > $1.count}
+        resultAnimalType = results.first?.type
+        
         resultLabel.text = String(resultAnimalType.rawValue)
         definitionResultLabel.text = resultAnimalType.definition
-        
     }
     
     deinit {

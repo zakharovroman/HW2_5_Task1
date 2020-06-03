@@ -10,3 +10,12 @@ struct Answer {
     let text: String
     let type: AnimalType
 }
+
+struct Result {
+    let type: AnimalType
+    var count: Int = 0
+    
+    init(type: AnimalType) {
+        self.type = type
+    }
+}
