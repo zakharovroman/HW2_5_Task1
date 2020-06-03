@@ -14,6 +14,8 @@ class ResultsViewController: UIViewController {
     // 2. Определить наиболее часто встречающийся тип животного
     // 3. Отобразить результаты на экране
     // 4. Избавится от кнопки back
+    
+    // 5. test aplication
 
     override func viewDidLoad() {
         super.viewDidLoad()
