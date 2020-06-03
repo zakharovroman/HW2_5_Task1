@@ -16,15 +16,22 @@ class ResultsViewController: UIViewController {
     // 4. Избавится от кнопки back
     
     // 5. test aplication
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var definitionResultLabel: UILabel!
+    
+    var resultAnimalType: AnimalType!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        resultLabel.text = String(resultAnimalType.rawValue)
+        definitionResultLabel.text = resultAnimalType.definition
+        
     }
     
     deinit {
-        print("ResultsViewController has been dealocated")
+        //print("ResultsViewController has been dealocated")
     }
 
 }

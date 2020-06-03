@@ -298,7 +298,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вам нравится быть с дурзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdB-qX-vzv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdB-qX-vzv">
                                         <rect key="frame" x="0.0" y="76" width="280" height="81.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -316,12 +316,17 @@
                         <viewLayoutGuide key="safeArea" id="GQM-Zh-Ok0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="nDg-Ri-F3W">
+                        <barButtonItem key="leftBarButtonItem" id="cMV-O2-r58"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="I5v-sC-MKw">
                             <connections>
                                 <segue destination="MQX-nN-Ib9" kind="unwind" unwindAction="unwindFor:" id="oGu-VU-8wb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="definitionResultLabel" destination="WdB-qX-vzv" id="UqB-ML-9rF"/>
+                        <outlet property="resultLabel" destination="inx-YJ-A0i" id="5lD-xL-Luu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KK6-X0-pTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="MQX-nN-Ib9" userLabel="Exit" sceneMemberID="exit"/>
